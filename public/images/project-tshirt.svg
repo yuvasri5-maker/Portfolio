@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tshirtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#tshirtBg)" />
+
+  <!-- Code / Grid Pattern -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="60" x2="600" y2="60" />
+    <line x1="0" y1="120" x2="600" y2="120" />
+    <line x1="0" y1="180" x2="600" y2="180" />
+    <line x1="0" y1="240" x2="600" y2="240" />
+    <line x1="0" y1="300" x2="600" y2="300" />
+    <line x1="100" y1="0" x2="100" y2="360" />
+    <line x1="200" y1="0" x2="200" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+    <line x1="500" y1="0" x2="500" y2="360" />
+  </g>
+
+  <!-- Left Side: Color palette picker & tool controls -->
+  <g transform="translate(45, 65)">
+    <!-- Palette Header -->
+    <rect width="150" height="230" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1.5" />
+    <text x="20" y="32" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#f3f4f6">Design Canvas</text>
+    
+    <!-- Color circles -->
+    <circle cx="35" cy="65" r="14" fill="#06b6d4" stroke="#ffffff" stroke-width="2" />
+    <circle cx="75" cy="65" r="12" fill="#f43f5e" />
+    <circle cx="115" cy="65" r="12" fill="#8b5cf6" />
+
+    <circle cx="35" cy="105" r="12" fill="#10b981" />
+    <circle cx="75" cy="105" r="12" fill="#f59e0b" />
+    <circle cx="115" cy="105" r="12" fill="#e2e8f0" />
+
+    <!-- Sliders -->
+    <text x="20" y="145" font-family="'Outfit', sans-serif" font-size="10" font-weight="500" fill="#9ca3af">Print Size: 75%</text>
+    <rect x="20" y="153" width="110" height="6" rx="3" fill="#374151" />
+    <rect x="20" y="153" width="82" height="6" rx="3" fill="url(#accentGrad)" />
+
+    <text x="20" y="185" font-family="'Outfit', sans-serif" font-size="10" font-weight="500" fill="#9ca3af">Rotation: 12°</text>
+    <rect x="20" y="193" width="110" height="6" rx="3" fill="#374151" />
+    <rect x="20" y="193" width="45" height="6" rx="3" fill="url(#accentGrad)" />
+  </g>
+
+  <!-- Right Side: 3D T-shirt vector with graphic imprint -->
+  <g transform="translate(230, 45)">
+    <!-- T-Shirt Silhouette -->
+    <path d="M 80 50 L 130 50 Q 170 85 210 50 L 260 50 L 320 100 L 285 140 L 255 125 L 255 260 L 85 260 L 85 125 L 55 140 L 20 100 Z" 
+          fill="url(#shirtGrad)" stroke="#38bdf8" stroke-width="2.5" />
+    
+    <!-- Collar Line -->
+    <path d="M 130 50 Q 170 85 210 50" fill="none" stroke="#64748b" stroke-width="2" />
+
+    <!-- Center Printed Graphic / Tech logo on shirt -->
+    <rect x="125" y="115" width="90" height="80" rx="8" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.5" />
+    <text x="170" y="150" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#38bdf8" text-anchor="middle">&lt;DEV/&gt;</text>
+    <text x="170" y="172" font-family="'Outfit', sans-serif" font-size="10" font-weight="600" fill="#a78bfa" text-anchor="middle">CUSTOM MERCH</text>
+  </g>
+
+  <!-- Banner Tag -->
+  <rect x="420" y="295" width="155" height="32" rx="16" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1.2" />
+  <text x="497" y="316" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" fill="#38bdf8" text-anchor="middle">Interactive 3D Preview</text>
+</svg>

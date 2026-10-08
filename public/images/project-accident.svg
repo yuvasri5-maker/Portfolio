@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iotBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#021c17" />
+    </linearGradient>
+    <linearGradient id="radarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#fb7185" />
+    </linearGradient>
+    <filter id="radarGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#iotBg)" />
+
+  <!-- Radar / Sensor Rings -->
+  <g transform="translate(180, 180)">
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#059669" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.4" />
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#34d399" stroke-width="2" stroke-opacity="0.8" />
+    
+    <!-- Central Sensor Core -->
+    <circle cx="0" cy="0" r="10" fill="#34d399" filter="url(#radarGlow)" />
+    
+    <!-- Radar Sweep Line -->
+    <line x1="0" y1="0" x2="100" y2="-90" stroke="#6ee7b7" stroke-width="2" />
+    <polygon points="0,0 90,-100 130,-50" fill="#10b981" fill-opacity="0.15" />
+
+    <!-- Incident Detected Pulse Node -->
+    <circle cx="65" cy="-60" r="8" fill="#f43f5e" filter="url(#radarGlow)" />
+    <circle cx="65" cy="-60" r="16" fill="none" stroke="#fb7185" stroke-width="1.5" opacity="0.7">
+      <animate attributeName="r" values="8;24;8" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Right Side Dashboard Card -->
+  <g transform="translate(360, 45)">
+    <!-- Glass Panel -->
+    <rect width="200" height="270" rx="12" fill="#042f2e" fill-opacity="0.85" stroke="#0d9488" stroke-width="1.5" />
+    
+    <!-- Header -->
+    <rect x="15" y="15" width="10" height="10" rx="5" fill="#f43f5e" />
+    <text x="32" y="24" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#fecdd3">EMERGENCY ALERT</text>
+    <text x="15" y="44" font-family="'JetBrains Mono', monospace" font-size="10" fill="#99f6e4">Lat: 11.9401° N | Lng: 79.8083° E</text>
+
+    <!-- Telemetry Stats -->
+    <rect x="15" y="60" width="170" height="50" rx="8" fill="#134e4a" />
+    <text x="25" y="80" font-family="'Outfit', sans-serif" font-size="10" fill="#5eead4">Impact Force (G-Sensor)</text>
+    <text x="25" y="98" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700" fill="#ffffff">8.4 G (CRITICAL)</text>
+
+    <rect x="15" y="120" width="170" height="50" rx="8" fill="#134e4a" />
+    <text x="25" y="140" font-family="'Outfit', sans-serif" font-size="10" fill="#5eead4">Tilt Angle (Gyroscope)</text>
+    <text x="25" y="158" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700" fill="#ffffff">68° Rollover</text>
+
+    <!-- Automated Dispatch Status -->
+    <rect x="15" y="180" width="170" height="42" rx="8" fill="#134e4a" />
+    <text x="25" y="198" font-family="'Outfit', sans-serif" font-size="10" fill="#5eead4">GSM / GPS Dispatch</text>
+    <text x="25" y="213" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#34d399">SMS &amp; Cloud Sent ✓</text>
+
+    <rect x="15" y="232" width="170" height="24" rx="12" fill="#0f766e" />
+    <text x="100" y="248" font-family="'Outfit', sans-serif" font-size="10" font-weight="600" fill="#ccfbf1" text-anchor="middle">Live Cloud Sync Active</text>
+  </g>
+
+  <!-- Bottom Tag -->
+  <rect x="35" y="300" width="180" height="30" rx="15" fill="#042f2e" stroke="#10b981" stroke-width="1.2" />
+  <text x="125" y="320" font-family="'Outfit', sans-serif" font-size="11" font-weight="600" fill="#6ee7b7" text-anchor="middle">⚡ Real-time Telemetry IoT</text>
+</svg>
