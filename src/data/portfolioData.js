@@ -209,7 +209,7 @@ export const educationData = [
     ]
   },
 {
-    degree: "HSLC (Higher Secondary) - Computer Science",
+    degree: "HSC (Higher Secondary) - Computer Science",
     institution: "Sri.P.Muthaiyar Higher Secondary School",
     affiliation: "Tamil Nadu State Board",
     duration: "2024",
